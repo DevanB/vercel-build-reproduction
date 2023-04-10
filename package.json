@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "check": "turbo check",
+    "clean": "turbo clean && pnpx rimraf@3 ./**/node_modules ./**/api ./**/build",
+    "commit": "git-cz",
+    "dev": "turbo dev --no-cache --continue",
+    "dev:example": "pnpm dev --filter=example-remix-app",
+    "dev:other": "pnpm dev --filter=other-remix-app",
+    "lint": "turbo lint",
+    "prepare": "is-ci || husky install",
+    "pre-commit": "turbo pre-commit --concurrency=1",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
+    "commitizen": "4.3.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint-config-example": "workspace:*",
+    "git-cz": "4.9.0",
+    "husky": "8.0.3",
+    "is-ci": "3.0.1",
+    "lint-staged": "13.2.0",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.1.1",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Remix",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    },
+    "noEmit": true,
+    "allowJs": true
+  }
+}

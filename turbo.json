@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "baseBranch": "origin/master",
+  "globalDependencies": ["**/.env.*local"],
+  "pipeline": {
+    "build": {
+      "outputs": [
+        "api/**",
+        "public/build/**"
+      ],
+      "dependsOn": ["^build"]
+    },
+    "check": {
+      "dependsOn": ["lint", "typecheck"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "pre-commit": {
+      "dependsOn": ["^pre-commit"]
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "typecheck": {
+      "dependsOn": ["^build"]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "RYM: Server",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "pnpm run dev:rym"
+      },
+      {
+        "name": "RYM: Client",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3000"
+      },
+      {
+        "name": "RYM: Server & Client",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "pnpm run dev:rym",
+        "serverReadyAction": {
+          "pattern": "Remix App Server started at (https?://.+) \\(https?://.*\\)",
+          "uriFormat": "%s",
+          "action": "debugWithChrome"
+        }
+      }
+    ]
+  }

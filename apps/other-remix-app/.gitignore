@@ -1,0 +1,17 @@
+node_modules
+
+.cache
+.env
+.vercel
+.output
+
+/build/
+/public/build
+/api/index.js
+/api/index.js.map
+
+**/.DS_Store
+
+.env*
+!.env.project
+!.env.vault

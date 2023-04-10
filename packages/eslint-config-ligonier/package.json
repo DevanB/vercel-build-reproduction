@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config-example",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pre-commit": "lint-staged"
+  },
+  "dependencies": {
+    "@remix-run/eslint-config": "1.15.0",
+    "@typescript-eslint/eslint-plugin": "5.57.1",
+    "@typescript-eslint/parser": "5.57.1",
+    "eslint": "8.37.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-config-turbo": "latest",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "react": "18.2.0"
+  }
+}
